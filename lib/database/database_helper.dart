@@ -70,7 +70,7 @@ class DatabaseHelper {
   Future<int> getJmlPemasukan() async {
     var dbClient = await checkDB;
     var queryResult = await dbClient!.rawQuery(
-        'SELECT SUM(jml_uang) AS TOTAL from $tableName WHERE $columnTipe = ?',
+        'SELECT SUM(jumlahUang) AS TOTAL from $tableName WHERE $columnTipe = ?',
         ['pemasukan']);
     int total = int.parse(queryResult[0]['TOTAL'].toString());
     return total;
@@ -80,7 +80,7 @@ class DatabaseHelper {
   Future<int> getJmlPengeluaran() async {
     var dbClient = await checkDB;
     var queryResult = await dbClient!.rawQuery(
-        'SELECT SUM(jml_uang) AS TOTAL from $tableName WHERE $columnTipe = ?',
+        'SELECT SUM(jumlahUang) AS TOTAL from $tableName WHERE $columnTipe = ?',
         ['pengeluaran']);
     int total = int.parse(queryResult[0]['TOTAL'].toString());
     return total;
