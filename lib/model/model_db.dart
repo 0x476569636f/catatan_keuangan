@@ -25,10 +25,10 @@ class ModelDb {
 
   //membuat objek ModelDb dari map yang berisi data dari database
   ModelDb.fromMap(Map<String, dynamic> map) {
-    id = map['id'];
-    tipe = map['tipe'];
-    keterangan = map['keterangan'];
-    jumlahUang = map['jumlahUang'];
-    tanggal = map['tanggal'];
+    this.id = map['id'];
+    this.tipe = map['tipe'];
+    this.keterangan = map['keterangan'];
+    this.jumlahUang = map['jumlahUang'];
+    this.tanggal = map['tanggal'];
   }
 }
